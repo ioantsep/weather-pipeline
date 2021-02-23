@@ -9,7 +9,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 ## Pipeline Architecture ##
 
 ![image](https://github.com/ioantsep/weather-pipeline/pipeline.png)
-![alt text](http://url/to/img.png)
+
 ![alt text](https://raw.githubusercontent.com/ioantsep/weather-pipeline/branch/path/to/img.png)
 
 ![Image of Yaktocat](https://octodex.github.com/images/pipeline.png)
