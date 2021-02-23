@@ -6,16 +6,31 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 - [x] leverages a serverless function to move the data to a data warehouse and then, 
 - [x] create a dashboard that displays the information. 
 
-## Pipeline architecture
+## Pipeline Architecture ##
 
 ![image](https://github.com/ioantsep/weather-pipeline/blob/master/pipeline.png)
+
+
+## **Data Flow** ##
+- Cloud Storage: data in JSON format from IoT sensor (9 features)
+
+- Data Flow 1: send to Cloud Dataflow
+
+- Data Flow 2: send to Cloud Pub/Sub. The Cloud Dataflow is the Publisher for messages 
+
+- Data Flow 3: send to Cloud Functions. Every time that there is a message, the Cloud Functions is triggering and the message goes to Subscriber
+
+- Data Flow 4: send to BigQuery which is the  Subscriber for Pub/Sub and the data is stored
+
+- visualization using Data Studio
+
 
 
 ## Dataset Information: 
 
 
 
-## **Build, provision and deploy the project on GCP** ##
+## **Build, Provision and Deploy the Project on GCP** ##
 1. Sign-in to Google Cloud Platform console and create a new project called --> "iotpipeline".
 1. Sign-in στην Google Cloud Platform: εισάγουμε τα απαραίτητα ζητούμενα στοιχεία του λογαριασμού μας για να εισέλθουμε στην κεντρική σελίδα της κονσόλας 
 2. Δημιουργία νέου project: από το μενού πλοήγησης πάνω αριστερά, επιλέγουμε την καρτέλα "IAM & admin", έπειτα την καρτέλα "Manage resources" και δημιουργούμε ένα νέο έργο (project) με ονομασία "iotpipeline". Το αναγνωριστικό του έργου (ID) πρέπει να είναι ένα μοναδικό όνομα σε όλα τα έργα του Google Cloud, οπότε και το σημειώνουμε (ID: iotpipeline-243711).
