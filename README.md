@@ -14,7 +14,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 - Data in JSON format from an IoT sensor (9 features)
 
 ## **Data Flow** ##
-- #### Cloud Storage: #### data from the sensor
+- #### Cloud Storage:#### data from the sensor
 
 - Data Flow 1: send to Cloud Dataflow
 
