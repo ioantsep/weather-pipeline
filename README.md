@@ -13,7 +13,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 ## Pipeline Architecture ##
 
-![pipeline](https://github.com/ioantsep/weather-pipeline/blob/main/pipeline.png)
+![pipeline](https://github.com/ioantsep/weather-pipeline-on-GCP/blob/main/Images/pipeline.png)
 
 
 
