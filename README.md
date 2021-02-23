@@ -15,7 +15,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 
 
-**.Build, provision and deploy the project on GCP **
+**Build, provision and deploy the project on GCP**
 -1.Sign-in to Google Cloud Platform console and create a new project called --> "iotpipeline".
 -2.
 
