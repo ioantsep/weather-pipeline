@@ -1,4 +1,4 @@
-# weather-pipeline
+# weather-pipeline-on-Google-Cloud-Platform
 
 The goal of this project is to build a weather data pipeline on Google Cloud Platform that:
 - [x] starts with a sensor from IoT, 
@@ -52,11 +52,23 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
  - "Temporary location" = "gs://iotpipeline-bucket/tmp".
  
    Click on "Run job" and Dataflow starts.
+   
+   	![dataflow](https://github.com/ioantsep/weather-pipeline-on-GCP/blob/main/Images/dataflow.png)
+   
+   
 
 8. Checking the Data Flow: BigQuery --> "iotpipeline-243711", Dataset = "weatherData", Table = "weatherDataTable" --> "QUERY TABLE", --> Query editor: 		
 	```
 	SELECT * FROM `iotpipeline-243711.weatherData.weatherDataTable` LIMIT 1000	
 	```
+	
+	![BigQuery](https://github.com/ioantsep/weather-pipeline-on-GCP/blob/main/Images/BigQuery%20table.png)
+	
+   
+	
 
 9. Creation graphs using Data Studio: "Query results" --> "EXPLORE WITH DATA STUDIO".
+
+	![DataStudio](https://github.com/ioantsep/weather-pipeline-on-GCP/blob/main/Images/Data%20Studio.png)
+   
 
