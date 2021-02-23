@@ -44,12 +44,14 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 6. Dataflow API: "API & Services" --> "Enable API and Services" --> "Welcome to the new API Library", search bar = "Dataflow" --> " Google Dataflow API" --> "Enable".
 
-7. Creation of template in Dataflow: "BIG DATA" --> "Dataflow" --> "CREATE JOB FROM TEMPLATE":
-	"Job name" = "dataflow-gcs-to-pubsub4", "Cloud Dataflow template" --> "Text Files on Cloud Storage to Cloud Pub/Sub",and then:
- 	"Input Cloud Storage File(s)" με "gs://codelab-iot-data-pipeline-sampleweatherdata/*.json" (public dataset), 
+7. Creation of template in Dataflow: "BIG DATA" --> "Dataflow" --> "CREATE JOB FROM TEMPLATE" with:
+ - "Job name" = "dataflow-gcs-to-pubsub4", 
+ - "Cloud Dataflow template" = "Text Files on Cloud Storage to Cloud Pub/Sub",
+ - "Input Cloud Storage File(s)" με "gs://codelab-iot-data-pipeline-sampleweatherdata/*.json" (public dataset), 
  - "Output Pub/Sub Topic" = "projects/iotpipeline-243711/topics/weatherdata", 
  - "Temporary location" = "gs://iotpipeline-bucket/tmp".
- Click on "Run job" and Dataflow starts.
+ 
+   Click on "Run job" and Dataflow starts.
 
 8. Checking the Data Flow: BigQuery --> "iotpipeline-243711", Dataset = "weatherData", Table = "weatherDataTable" --> "QUERY TABLE", --> Query editor: 		
 	```
