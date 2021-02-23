@@ -32,7 +32,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 
 ## **Build, Provision and Deploy the Project on GCP** ##
-1. Sign-in to Google Cloud Platform console and create a new project, project_name='iotpipeline', project_ID='iotpipeline-243711'.
+1. Sign-in to Google Cloud Platform console and create a new project, project_name = "iotpipeline", project_ID = "iotpipeline-243711'".
 
 2. Creation of a table in BigQuery: "BIG DATA" --> "BigQuery" --> click on projectID --> "CREATE DATASET" with DatasetID = "weatherData" -->  click on "CREATE   TABLE" --> "Source Data" --> "Empty table", "Table type" = "Native table", "Table name" = "weatherDataTable", "Schema" --> "Add field" with 9 features. 
 
@@ -40,13 +40,18 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 4. Connect Pub/Sub with BigQuery using Cloud Functions: "COMPUTE" --> "Cloud Functions" --> "Enable API" --> "Create function", "name" = "weatherPubSubToBQ", "Trigger" = "Cloud Pub/Sub", "Topic" = "weatherdata", "Source code" = "Inline editor". In tab "index.js", write the JavaScript code (Node.js 6): [index.js](https://github.com/ioantsep/weather-pipeline/blob/main/index.js) and in the tab "package.json" write code : 	[package.json](https://github.com/ioantsep/weather-pipeline/blob/main/package.json). Then in "Function to execute" = "subscribe" --> "Create".	
 	
-5. Creation of a storage bucket for Dataflow: "STORAGE", --> "Browser" --> "Create bucket",  "iotpipeline-bucket" --> "Create".
+5. Creation of a storage bucket for Dataflow: "STORAGE" --> "Browser" --> "Create bucket", "iotpipeline-bucket" --> "Create".
 
-6. Dataflow API: "API & Services" --> "Enable API and Services" --> "Welcome to the new API Library", searchbar = "Dataflow" --> " Google Dataflow API" --> "Enable".
+6. Dataflow API: "API & Services" --> "Enable API and Services" --> "Welcome to the new API Library", search bar = "Dataflow" --> " Google Dataflow API" --> "Enable".
 
-7. Δημιουργία εργασίας από πρότυπο (template) στο Dataflow: από το μενού πλοήγησης πάνω αριστερά, επιλέγουμε την καρτέλα "Dataflow", που βρίσκεται στο θεματικό πεδίο "BIG DATA", κλικάρουμε πάνω στο "CREATE JOB FROM TEMPLATE" και στη συνέχεια συμπληρώνουμε το "Job name" με "dataflow-gcs-to-pubsub4", το "Cloud Dataflow template" με "Text Files on Cloud Storage to Cloud Pub/Sub", το "Input Cloud Storage File(s)" με "gs://codelab-iot-data-pipeline-sampleweatherdata/*.json" (public dataset), το "Output Pub/Sub Topic" με "projects/iotpipeline-243711/topics/weatherdata" και το "Temporary location" με "gs://iotpipeline-bucket/tmp". Πατάμε στο κουμπί "Run job" και αρχίζει η εργασία του Dataflow.
+7. Creation of template in Dataflow: "BIG DATA" --> "Dataflow" --> "CREATE JOB FROM TEMPLATE":
+	"Job name" = "dataflow-gcs-to-pubsub4", "Cloud Dataflow template" --> "Text Files on Cloud Storage to Cloud Pub/Sub",and then:
+ 	"Input Cloud Storage File(s)" με "gs://codelab-iot-data-pipeline-sampleweatherdata/*.json" (public dataset), 
+ - "Output Pub/Sub Topic" = "projects/iotpipeline-243711/topics/weatherdata", 
+ - "Temporary location" = "gs://iotpipeline-bucket/tmp".
+ Click on "Run job" and Dataflow starts.
 
-8. Checking the Data Flow: BigQuery --> "iotpipeline-243711", Dataset = "weatherData", Table = "weatherDataTable" --> "QUERY TABLE", -->Query editor: 		
+8. Checking the Data Flow: BigQuery --> "iotpipeline-243711", Dataset = "weatherData", Table = "weatherDataTable" --> "QUERY TABLE", --> Query editor: 		
 	```
 	SELECT * FROM `iotpipeline-243711.weatherData.weatherDataTable` LIMIT 1000	
 	```
