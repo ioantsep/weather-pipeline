@@ -42,21 +42,11 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 	[index.js](https://github.com/ioantsep/weather-pipeline/blob/main/index.js)
 
-and in the tab "package.json" write code :
+	and in the tab "package.json" write code :
 
 	[package.json](https://github.com/ioantsep/weather-pipeline/blob/main/package.json)
 
-{
-  "name": "function-weatherPubSubToBQ",
-  "version": "0.0.1",
-  "private": true,
-  "license": "Apache-2.0",
-  "author": "Google Inc.",
-  "dependencies": {
-    "@google-cloud/bigquery": "^0.9.6"
-  }
-}
-Then in "Function to execute" = "subscribe" --> "Create" Pub/Sub με τη BigQuery.	
+	Then in "Function to execute" = "subscribe" --> "Create" Pub/Sub με τη BigQuery.	
 	
 6. Creation of a storage bucket for Dataflow: "STORAGE", --> "Browser" --> "Create bucket",  "iotpipeline-bucket" --> "Create".
 7. Ενεργοποίηση του Dataflow API: από το μενού πλοήγησης πάνω αριστερά, επιλέγουμε την καρτέλα "API & Services", πατάμε στο "Enable API and Services" και στη γραμμή αναζήτησης του "Welcome to the new API Library", γράφουμε "Dataflow" και στη συνέχεια πατάμε στο " Google Dataflow API" και στο τέλος πατάμε το "Enable".
