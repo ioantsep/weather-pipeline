@@ -38,15 +38,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 3. Creation of a Pub/Sub topic: "BIG DATA" --> "Pub/Sub" --> "Topics" --> "Enable API" --> "Create a topic", name ="weatherdata" --> "CREATE". 
 
-4. Connect Pub/Sub with BigQuery using Cloud Functions: "COMPUTE" --> "Cloud Functions" --> "Enable API" --> "Create function", "name" = "weatherPubSubToBQ", "Trigger" = "Cloud Pub/Sub", "Topic" = "weatherdata", "Source code" = "Inline editor". In tab "index.js", write the JavaScript code (Node.js 6):
-
-	[index.js](https://github.com/ioantsep/weather-pipeline/blob/main/index.js)
-
-	and in the tab "package.json" write code :
-
-	[package.json](https://github.com/ioantsep/weather-pipeline/blob/main/package.json)
-
-	Then in "Function to execute" = "subscribe" --> "Create".	
+4. Connect Pub/Sub with BigQuery using Cloud Functions: "COMPUTE" --> "Cloud Functions" --> "Enable API" --> "Create function", "name" = "weatherPubSubToBQ", "Trigger" = "Cloud Pub/Sub", "Topic" = "weatherdata", "Source code" = "Inline editor". In tab "index.js", write the JavaScript code (Node.js 6): [index.js](https://github.com/ioantsep/weather-pipeline/blob/main/index.js) and in the tab "package.json" write code : 	[package.json](https://github.com/ioantsep/weather-pipeline/blob/main/package.json). Then in "Function to execute" = "subscribe" --> "Create".	
 	
 5. Creation of a storage bucket for Dataflow: "STORAGE", --> "Browser" --> "Create bucket",  "iotpipeline-bucket" --> "Create".
 
