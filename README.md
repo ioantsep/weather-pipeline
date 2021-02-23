@@ -10,6 +10,8 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 ![pipeline](https://user-images.githubusercontent.com/47212261/108886813-09eae080-75cf-11eb-8147-3271c50161d4.png)
 
+![pipeline](https://github.com/ioantsep/weather-pipeline/blob/main/pipeline.png)
+
 ## Dataset Information ##
 - Data in JSON format from an IoT sensor (9 features)
 
