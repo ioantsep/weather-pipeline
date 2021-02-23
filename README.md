@@ -1,4 +1,4 @@
-# weather-pipeline
+# weather-pipeline-on-Google-Cloud-Platform
 
 The goal of this project is to build a weather data pipeline on Google Cloud Platform that:
 - [x] starts with a sensor from IoT, 
