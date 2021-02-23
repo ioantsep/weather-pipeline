@@ -6,12 +6,16 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 - [x] leverages a serverless function to move the data to a data warehouse and then, 
 - [x] create a dashboard that displays the information. 
 
+## Dataset Information ##
+- Data in JSON format from an IoT sensor (9 features)
+
+
+
 ## Pipeline Architecture ##
 
 ![pipeline](https://github.com/ioantsep/weather-pipeline/blob/main/pipeline.png)
 
-## Dataset Information ##
-- Data in JSON format from an IoT sensor (9 features)
+
 
 ## **Data Flow** ##
 - __Cloud Storage:__ data from the sensor
