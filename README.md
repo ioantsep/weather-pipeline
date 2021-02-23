@@ -14,17 +14,17 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 - Data in JSON format from an IoT sensor (9 features)
 
 ## **Data Flow** ##
-- #### Cloud Storage:#### data from the sensor
+- __Cloud Storage:__ data from the sensor
 
-- Data Flow 1: send to Cloud Dataflow
+- __Data Flow 1:__ send to Cloud Dataflow
 
-- Data Flow 2: send to Cloud Pub/Sub. The Cloud Dataflow is the Publisher for messages 
+- __Data Flow 2:__ send to Cloud Pub/Sub. The Cloud Dataflow is the Publisher for messages 
 
-- Data Flow 3: send to Cloud Functions. Every time that there is a message, the Cloud Functions is triggering and the message goes to Subscriber
+- __Data Flow 3:__ send to Cloud Functions. Every time that there is a message, the Cloud Functions is triggering and the message goes to Subscriber
 
-- Data Flow 4: send to BigQuery which is the  Subscriber for Pub/Sub and the data is stored
+- __Data Flow 4:__ send to BigQuery which is the  Subscriber for Pub/Sub and the data is stored
 
-- visualization using Data Studio
+- __visualization__: using Data Studio
 
 
 
