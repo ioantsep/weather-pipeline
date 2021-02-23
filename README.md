@@ -47,9 +47,9 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 7. Δημιουργία εργασίας από πρότυπο (template) στο Dataflow: από το μενού πλοήγησης πάνω αριστερά, επιλέγουμε την καρτέλα "Dataflow", που βρίσκεται στο θεματικό πεδίο "BIG DATA", κλικάρουμε πάνω στο "CREATE JOB FROM TEMPLATE" και στη συνέχεια συμπληρώνουμε το "Job name" με "dataflow-gcs-to-pubsub4", το "Cloud Dataflow template" με "Text Files on Cloud Storage to Cloud Pub/Sub", το "Input Cloud Storage File(s)" με "gs://codelab-iot-data-pipeline-sampleweatherdata/*.json" (public dataset), το "Output Pub/Sub Topic" με "projects/iotpipeline-243711/topics/weatherdata" και το "Temporary location" με "gs://iotpipeline-bucket/tmp". Πατάμε στο κουμπί "Run job" και αρχίζει η εργασία του Dataflow.
 
 8. Checking the Data Flow: BigQuery --> "iotpipeline-243711", Dataset = "weatherData", Table = "weatherDataTable" --> "QUERY TABLE", -->Query editor: 		
-```
-SELECT * FROM `iotpipeline-243711.weatherData.weatherDataTable` LIMIT 1000	
-```
+	```
+	SELECT * FROM `iotpipeline-243711.weatherData.weatherDataTable` LIMIT 1000	
+	```
 
 9. Creation graphs using Data Studio: "Query results" --> "EXPLORE WITH DATA STUDIO".
 
