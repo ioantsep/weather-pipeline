@@ -3,11 +3,17 @@
 The goal of this project is to build a weather data pipeline on Google Cloud Platform that:
 - [x] starts with a sensor from IoT, 
 - [x] utilizes a message queue to receive and deliver data, 
-- [x]l everages a serverless function to move the data to a data warehouse and then 
+- [x] leverages a serverless function to move the data to a data warehouse and then, 
 - [x] create a dashboard that displays the information. 
 
 
-## Build, provision and deploy the project to an Azure WebApp
+## Dataset Information: 
+1.Sign-in to Google Cloud Platform console and create a new project.
+
+
+## Build, provision and deploy the project on GCP:
+
+
 
 ```
 git status
