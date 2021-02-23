@@ -52,11 +52,22 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
  - "Temporary location" = "gs://iotpipeline-bucket/tmp".
  
    Click on "Run job" and Dataflow starts.
+   
+   ![pipeline](https://github.com/ioantsep/weather-pipeline/blob/main/pipeline.png)
+   
+   
 
 8. Checking the Data Flow: BigQuery --> "iotpipeline-243711", Dataset = "weatherData", Table = "weatherDataTable" --> "QUERY TABLE", --> Query editor: 		
 	```
 	SELECT * FROM `iotpipeline-243711.weatherData.weatherDataTable` LIMIT 1000	
 	```
+	
+	![pipeline](https://github.com/ioantsep/weather-pipeline/blob/main/pipeline.png)
+   
+	
 
 9. Creation graphs using Data Studio: "Query results" --> "EXPLORE WITH DATA STUDIO".
+
+	![BigQuery](https://github.com/ioantsep/weather-pipeline-on-GCP/blob/main/Images/BigQuery%20table.png)
+   
 
