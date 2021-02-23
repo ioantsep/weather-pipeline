@@ -10,6 +10,8 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 ![image](https://github.com/ioantsep/weather-pipeline/blob/master/pipeline.png)
 
+![Image of Yaktocat](https://octodex.github.com/images/pipeline.png)
+
 ## Dataset Information ##
 - Data in JSON format from an IoT sensor (9 features)
 
