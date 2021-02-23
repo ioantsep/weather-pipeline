@@ -8,7 +8,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 ## Pipeline architecture
 
-![image](https://github.com/ElaineYao/Simulation-of-Real-time-Traffic-Prediction/blob/master/pipeline.PNG)
+![image](https://github.com/ioantsep/weather-pipeline/blob/master/pipeline.PNG)
 
 
 ## Dataset Information: 
