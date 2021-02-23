@@ -13,7 +13,7 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 ## Dataset Information: 
 
-**Dataset Information:**
+**Build, provision and deploy the project on GCP**
 - Stands for Next Generation Weather Radar
 - Network of 160 high-resolution Doppler radar sites that detects precipitation and atmospheric movement
 - Historical archives from June 1991 to present
