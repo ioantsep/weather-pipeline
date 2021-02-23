@@ -35,11 +35,8 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 1. Sign-in to Google Cloud Platform console and create a new project, project_name='iotpipeline', project_ID='iotpipeline-243711'.
 2. Creation of a table in BigQuery: "BIG DATA" --> "BigQuery" --> click on projectID --> "CREATE DATASET" with DatasetID = "weatherData" -->  click on "CREATE   TABLE" --> "Source Data" --> "Empty table", "Table type" = "Native table", "Table name" = "weatherDataTable", "Schema" --> "Add field" with 9 features. 
 3. Creation of a Pub/Sub topic: "BIG DATA" --> "Pub/Sub" --> "Topics" --> "Enable API" --> "Create a topic", name ="weatherdata" --> "CREATE" 
-4. Connect Pub/Sub with BigQuery using Cloud Functions: "COMPUTE" --> "Cloud Functions" --> "Enable API" --> "Create function", "name" = "weatherPubSubToBQ", "Trigger" = "Cloud Pub/Sub", "Topic" = "weatherdata", "Source code" = "Inline editor". In tab "index.js", write the JavaScript code (Node.js 6): 
+4. Connect Pub/Sub with BigQuery using Cloud Functions: "COMPUTE" --> "Cloud Functions" --> "Enable API" --> "Create function", "name" = "weatherPubSubToBQ", "Trigger" = "Cloud Pub/Sub", "Topic" = "weatherdata", "Source code" = "Inline editor". In tab "index.js", write the JavaScript code (Node.js 6):[index.js](https://github.com/ioantsep/weather-pipeline/blob/main/index.js)
 
-[index.js](https://github.com/ioantsep/weather-pipeline/blob/main/index.js)
-
-Then in "Function to execute" = "subscribe" --> "Create" Pub/Sub με τη BigQuery.
 
 
 	ενώ στην καρτέλα "package.json", γράφουμε τον παρακάτω κώδικα:
@@ -54,7 +51,7 @@ Then in "Function to execute" = "subscribe" --> "Create" Pub/Sub με τη BigQu
     "@google-cloud/bigquery": "^0.9.6"
   }
 }
-	
+Then in "Function to execute" = "subscribe" --> "Create" Pub/Sub με τη BigQuery.	
 	
 6. Creation of a storage bucket for Dataflow: "STORAGE", --> "Browser" --> "Create bucket",  "iotpipeline-bucket" --> "Create".
 7. Ενεργοποίηση του Dataflow API: από το μενού πλοήγησης πάνω αριστερά, επιλέγουμε την καρτέλα "API & Services", πατάμε στο "Enable API and Services" και στη γραμμή αναζήτησης του "Welcome to the new API Library", γράφουμε "Dataflow" και στη συνέχεια πατάμε στο " Google Dataflow API" και στο τέλος πατάμε το "Enable".
