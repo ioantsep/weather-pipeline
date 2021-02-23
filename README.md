@@ -33,13 +33,16 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 
 ## **Build, Provision and Deploy the Project on GCP** ##
 1. Sign-in to Google Cloud Platform console and create a new project, project_name='iotpipeline', project_ID='iotpipeline-243711'.
+
 2. Creation of a table in BigQuery: "BIG DATA" --> "BigQuery" --> click on projectID --> "CREATE DATASET" with DatasetID = "weatherData" -->  click on "CREATE   TABLE" --> "Source Data" --> "Empty table", "Table type" = "Native table", "Table name" = "weatherDataTable", "Schema" --> "Add field" with 9 features. 
+
 3. Creation of a Pub/Sub topic: "BIG DATA" --> "Pub/Sub" --> "Topics" --> "Enable API" --> "Create a topic", name ="weatherdata" --> "CREATE" 
+
 4. Connect Pub/Sub with BigQuery using Cloud Functions: "COMPUTE" --> "Cloud Functions" --> "Enable API" --> "Create function", "name" = "weatherPubSubToBQ", "Trigger" = "Cloud Pub/Sub", "Topic" = "weatherdata", "Source code" = "Inline editor". In tab "index.js", write the JavaScript code (Node.js 6):[index.js](https://github.com/ioantsep/weather-pipeline/blob/main/index.js)
 
 
 
-	ενώ στην καρτέλα "package.json", γράφουμε τον παρακάτω κώδικα:
+	ενώ στην καρτέλα "package.json", γράφουμε τον παρακάτω κώδικα:[package.json]https://github.com/ioantsep/weather-pipeline/blob/main/package.json
 
 {
   "name": "function-weatherPubSubToBQ",
