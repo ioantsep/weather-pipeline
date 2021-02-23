@@ -6,12 +6,17 @@ The goal of this project is to build a weather data pipeline on Google Cloud Pla
 - [x] leverages a serverless function to move the data to a data warehouse and then, 
 - [x] create a dashboard that displays the information. 
 
+## Pipeline architecture
+
+
+
 
 ## Dataset Information: 
-1.Sign-in to Google Cloud Platform console and create a new project.
+
 
 
 ## Build, provision and deploy the project on GCP:
+1.Sign-in to Google Cloud Platform console and create a new project.
 
 
 
